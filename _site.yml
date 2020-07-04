@@ -1,0 +1,12 @@
+name: "DatColombia"
+output_dir: "docs"
+navbar:
+  title: "DatColombia"
+  left:
+  - text: "Home"
+   href: index.html
+  - text: "Aprendizaje automático de datos Colombianos (Machine Learning)"
+   href: Untitled.html
+output:
+  html_document:
+ theme: cosmo
