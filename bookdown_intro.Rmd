@@ -1,6 +1,100 @@
 --- 
 title: "Aprendizaje automático de datos Colombianos (Machine Learning)"
 author: "Danna Cruz"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: DannaCruz/DatColombia
+description: "Este libro es una introducción aprendizaje automatico y aplicado a datos Colombianos"
+---
+
+# Motivación{-}
+
+Placeholder
+
+
+
+<!--chapter:end:index.Rmd-->
+
+
+# Introducción {#intro}
+
+Placeholder
+
+
+## Datos de entrenamiento
+## Supervisados y no supervisados
+## Paquetes de R
+
+<!--chapter:end:01-intro.Rmd-->
+
+
+# Análisis de regresión
+
+Placeholder
+
+
+## Modelo Lineal {#lineal}
+## Modelo Multiple {#multiple}
+## Modelo Multiple {#categorica}
+## Suposiciones y diagnósticos de regresión {#diagnostico}
+## Modelos no lineales {#Nolineal}
+
+<!--chapter:end:02-regresion.Rmd-->
+
+# Componentes
+
+<!--chapter:end:03-extensiones.Rmd-->
+
+# Publicación
+
+<!--chapter:end:04-publicacion.Rmd-->
+
+
+# Coronavirus en Colombia con JAGS. {#intro} 
+
+Placeholder
+
+
+## Instalación 
+## El modelo.
+### Grafica Séries temporais
+### Correr el  modelo en JAGS 
+
+<!--chapter:end:05-CoronaVirus.Rmd-->
+
+# (APPENDIX) Apéndices {-} 
+
+
+```{r setup, include=FALSE}
+# Este trozo de código se evalúa pero no se muestra. Aquí se utiliza para establecer
+# las opciones globales de renderizado, para cargar librerías y funciones.
+inline <- function(x = "") paste0("`` `r ", x, "` ``")
+inline2 <- function(x = "") paste0("`r ", x, "`")
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+R Markdown {#rmarkdown}
+==========
+
+Introducción
+------------
+
+<!--chapter:end:10-rmarkdown.Rmd-->
+
+`r if (knitr:::is_html_output()) '
+# Bibliografía {-}
+'`
+
+<!--chapter:end:20-references.Rmd-->
+
+--- 
+title: "Aprendizaje automático de datos Colombianos (Machine Learning)"
+author: "Danna Cruz"
 ---
 
 knit: (function(input_file, encoding) {
@@ -128,4 +222,7 @@ El paquete *tidyverse* tiene varias funciones:
 
 
 
+
+
+<!--chapter:end:Untitled.Rmd-->
 

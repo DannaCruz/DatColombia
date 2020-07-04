@@ -1,0 +1,16 @@
+# (APPENDIX) Apéndices {-} 
+
+
+```{r setup, include=FALSE}
+# Este trozo de código se evalúa pero no se muestra. Aquí se utiliza para establecer
+# las opciones globales de renderizado, para cargar librerías y funciones.
+inline <- function(x = "") paste0("`` `r ", x, "` ``")
+inline2 <- function(x = "") paste0("`r ", x, "`")
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+R Markdown {#rmarkdown}
+==========
+
+Introducción
+------------

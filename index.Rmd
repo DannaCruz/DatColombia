@@ -1,0 +1,40 @@
+--- 
+title: "Aprendizaje automático de datos Colombianos (Machine Learning)"
+author: "Danna Cruz"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: DannaCruz/DatColombia
+description: "Este libro es una introducción aprendizaje automatico y aplicado a datos Colombianos"
+---
+
+
+
+"El lenguaje es el alma del pueblo"-Fragmento de la película Tolkien. 
+
+# Motivación{-}
+
+
+Este libro fue construido para ayudar a entender algunas herramientas en R de Aprendizaje automático y aportar contenido en español. Además, queríamos  aprovechar que actualmente, tenemos muchas bases de datos disponibles y de todo tipo. Quisiera fomentar el análisis de datos para todos los que quieran, es una práctica libre y cualquiera, con conocimientos básicos de R y Estadística, puede hacerlo. 
+
+Fue escrito por Danna Cruz y Luis Alejandro Másmela y siempre acompañados por Cantelli. 
+![ ](images/CANTE.JPG)
+
+
+```{r echo=FALSE, fig.align='left'}
+knitr::include_graphics("images/by-sa-88x31.png")
+```
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+# funciones auxiliares
+inline <- function(x = "") paste0("`` `r ", x, "` ``")
+inline2 <- function(x = "") paste0("`r ", x, "`")
+```
