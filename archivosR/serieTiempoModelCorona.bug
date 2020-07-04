@@ -1,0 +1,14 @@
+ model{
+  for(i in 1:T){
+    y[i] ~ dpois(mu[i])
+    mu[i] = (a*exp(c*i))/(1+b*exp(c*i))
+  }
+  a ~ dgamma(0.5, 0.5) 
+  b ~ dgamma(1.5, 1.5) 
+  c ~ dgamma(0.5, 0.5) 
+  
+for(j in 1:k){
+yfuturo[j] ~ dpois(mufuturo[j])
+mufuturo[j] = (a*exp(c*(T+j)))/(1+ b*exp(c*(T+j)))
+}
+}

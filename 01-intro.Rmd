@@ -1,0 +1,93 @@
+# Introducción {#intro}
+
+![ ](images/meme1.jpeg)
+
+Hubo un tiempo en que nos entusiasmaba saber qué era aprendizaje automático, nos daba algo de miedo intentar aprender por nuestra cuenta, sin embargo, decidimos tomar riendas en el asunto y nos preparamos para una avalancha de matemáticas que tomaría semanas analizar. Cuando finalmente llegamos al tema, nos decepcionamos: ¡ya habíamos tratado con modelos de aprendizaje automático en el pasado y ni siquiera nos habíamos dado cuenta! Desde antes de la secundaria, ¡incluso!.
+
+Aprendizaje automático o machine learning tienen dos aspectos claves: los modelos y los algoritmos. 
+
+Los modelos son útiles porque pueden ir más allá y ayudarlo a comprender el futuro. El modelo tiene poder predictivo, dado algún tipo de entrada, puede darnos un valor para cualquier futuro que nos interese. Convierte informes aburridos en algo mas útil. La clave: emplear más y más cantidad de datos.
+
+El modelo puede tener sus limitaciones, pero esta es una forma en que podemos expandir los datos más allá de un informe estático en algo más flexible y más perspicaz. Una variable puede ser modelada por algún efecto que suponemos que interfiere en el evento, por ejemplo, si sabemos que un político pertenece a cierto partido, es muy probable que sea corrupto. Es posible que haya tenido en algún momento esta secuencia de pensamientos. Si es así, felicidades, ¡ha estado haciendo aprendizaje automático sin siquiera saberlo! Este tipo particular de modelo de aprendizaje automático se llama regresión lineal. 
+
+Un algoritmo es un conjunto de pasos realizados en orden. Eso es todo un algoritmo. El algoritmo más simple para regresión lineal consiste en colocar dos puntos en un gráfico y luego dibujar una línea entre ellos. Sin embargo, el algoritmo se vuelve más complicado cuando intenta hacer el mismo procedimiento con más de dos puntos. Ese proceso involucra más ecuaciones que pueden ser tediosas de calcular a mano pero muy fáciles de manejar para un procesador en una computadora y en microsegundos.
+
+En muchos casos, los detalles de estos algoritmos están más allá del alcance de este libro, pero puede buscarlos fácilmente. Cuando pensamos en el aprendizaje automático, en un sentido ingenuo pensamos casi exclusivamente en las computadoras pero el aprendizaje automático tiene su base en las matemáticas y las estadísticas. Una comprensión estadística sólida es primordial para comprender el funcionamiento interno de un algoritmo de aprendizaje automático.  De hecho, se puede hacer todos los cálculos de aprendizaje automático a mano utilizando solo las matemáticas. Sin embargo, dicho proceso se vuelve insostenible dependiendo del algoritmo después de solo unos pocos datos. Sin embargo, los lenguajes de programación modernos tienen funciones y paquetes integrados, como la función `lm ()`  en `R`. 
+
+Este libro no se trata de construir esos algoritmos, sino que, se trata de aprender cómo utilizarlos. 
+
+
+## Datos de entrenamiento
+
+Un método estadístico que cubrimos en detalle es: *los datos de entrenamiento*. El aprendizaje automático requiere que primero entrenemos un modelo de datos, pero ¿qué significa eso exactamente?. 
+
+Suponga que tenemos un modelo y tenemos datos para los que queremos hacer una predicción, por lo que los pasamos a través del modelo y obtenemos un resultado. Luego evaluamos los resultados y vemos si los errores asociados en el modelo disminuyen o no. Si lo hacen, estamos ajustando bien el modelo, de lo contrario, si los errores continúan acumulándose, necesitamos ajustar aún más nuestro modelo. Pero, si, por ejemplo, pasamos un modelo con 50 datos y luego usamos esos 50 datos para verificar el modelo, el resultado que obtenemos será sospechosamente preciso. Esto se debe a que nuestro modelo ya ha visto los datos, por lo que básicamente ya conoce la respuesta correcta.
+
+Es muy importante para nosotros no correr nuestros modelos de aprendizaje automático en los mismos datos que luego usamos para probar su validez. A menudo nuestras manos están atadas con la disponibilidad de datos. Así, siguiendo el principio de parsimonia, dividimos el conjunto de datos de tal manera que usamos la mayoría de los  datos para el *entrenamiento* y dejamos algunos para probar.
+
+El modelo se entrenará y luego se probará en datos que tienen básicamente la misma forma que el conjunto de prueba pero que el modelo no ha visto. Esto lo veremos en casi todos los ejemplos que mostraremos mas adelante.
+
+
+## Supervisados y no supervisados
+
+En el universo de los algoritmos de aprendizaje automático, hay dos tipos: *supervisados* y *no supervisados*. Los modelos de aprendizaje supervisados son aquellos que predicen valores a partir de alguna información conocida. La mayoría de los algoritmos de aprendizaje automático son supervisados. Los modelos de aprendizaje no supervisados son aquellos en los que el modelo de aprendizaje automático deriva patrones e información de los datos al tiempo que determina el parámetro de ajuste. No se guia por una información a priori o por alguna muestra, este modelo aprende de la información que va recolectando mientras que va estimando.
+
+
+Un ejemplo de aprendizaje supervisado podría ser algo como esto: suponga que se desea predecir la calidad de vida basado en indicadores socioeconómicos. En un país tan desigual como Colombia, se puede concluir que una persona de escasos recursos tiene una vida mucho mas difícil que una persona que nace en cuna de oro. En esta situación, tenemos un modelo que ingiere datos en los que estamos interesados y nos da un resultado según lo decidido por las condiciones del modelo.
+
+En contraste, un modelo de aprendizaje no supervisado podría ser algo como esto: tenemos una gran cantidad de datos y queremos saber cómo separarlos en grupos significativos. Podríamos tener un montón de datos de una encuesta a Colombianos sobre su nivel de educación y su estrato social. Podemos usar algunos algoritmos en la rama no supervisada para encontrar una manera de agrupar los datos en grupos significativos para los que podríamos definir su intención de voto. En este caso, el modelo no tiene una respuesta que le diga: "Para el nivel de educación y el estrato social dados de tal persona, debería votar por cierto candidato"; debe resolver eso por sí mismo. En resumen:
+
+* Supervisados:
+
+  + Análisis de regresión para predecir una variable continua: Predecir la calidad de vida en función de los indicadores socioeconómicos. 
+  
+  + Clasificación para predecir la clase (o grupo) de individuos: Predecir la probabilidad de tener diabetes con base en la concentración de glucosa en el plasma de los pacientes.
+  
+  Estos métodos son **supervisados** porque construimos el modelo basado en valores de resultados conocidos. Es decir, la máquina aprende de los resultados de observación conocidos para predecir el resultado de casos futuros.
+  
+* No supervisados:
+
+  + Agrupación: identificar patrones o grupos de objetos similares dentro de un conjunto de datos de interés. 
+ 
+  + Componentes principales: Resumir y visualizar la información más importante contenida en un conjunto de datos multivariados
+  
+Estos métodos son **no supervisados** porque no nos guiamos por ideas *a priori* de qué variables o muestras pertenecen a qué grupos. El algoritmo de la máquina "aprende solo" cómo agrupar o resumir los datos.
+
+
+
+## Paquetes de R
+
+Para Aprendizaje automático recomiendo dos paquetes:
+
+1. *tidyverse*: para manipular y visualizar datos,
+
+2. *caret*: para facilitar el trabajo con aprendizaje automático. 
+
+
+```{r, message=FALSE}
+library ( "tidyverse" )
+library ( "caret" ) 
+```
+
+Los datos deben estar en formato rectangular, donde las columnas son variables y las filas son observaciones (individuos o muestras). 
+
+Debe tener cuidado con los nombres de las variables, ya que puede generar problemas de compatibilidad. No escriba los nombres con espacios en blanco y caracteres especiales.  Por ejemplo, evite escribir Número de Robos, en su lugar escriba: No_de_robos. Evite comenzar los nombres de la variable con un número, también puede generar problemas. Reemplace los valores faltantes por *NA*.
+
+
+El paquete *tidyverse* tiene varias funciones:
+
+- `filter()`: Selecciona filas (observaciones / muestras) en función de sus valores. 
+- `[distinct()]`: Elimina filas duplicadas. 
+- `[arrange()]`: Reordenar las filas. 
+- `[select()]`: Relecciona columnas (variables) por sus nombres. 
+- `[rename()]`: Cambiar el nombre de las columnas. 
+- `[mutate()]`: Agrega o crea nuevas variables. 
+- `[summarise()]`: Calcular resúmenes estadísticos.
+- `[group_by()]`: Operar en subconjuntos del conjunto de datos.
+
+
+> **_NOTA:_** `The forward-pipe chaining: Tenga en cuenta que, los paquetes `tidyverse` permiten utilizar el operador de encadenamiento o composición `(%>%)` para combinar múltiples operaciones. Por ejemplo, `x%>%f` es equivalente a $f (x)$. Osea, la funcion compuesta en acción. 
+
+
+
+
