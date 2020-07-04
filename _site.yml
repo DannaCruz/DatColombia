@@ -1,12 +1,22 @@
-name: "DatColombia"
-output_dir: "docs"
-navbar:
-  title: "DatColombia"
-  left:
-  - text: "Home"
-   href: index.html
-  - text: "Aprendizaje automático de datos Colombianos (Machine Learning)"
-   href: Untitled.html
-output:
-  html_document:
- theme: cosmo
+book_filename: 'bookdown_intro'
+repo: https://github.com/DannaCruz/DatColombia
+output_dir: docs
+new_session: no
+language:
+  label:
+    fig: 'Figura '
+    tab: 'Tabla '
+    eq: 'Ecuación '
+    thm: 'Teorema '
+    lem: 'Lema '
+    def: 'Definición '
+    cor: 'Corolario '
+    prp: 'Proposición '
+    exm: 'Ejemplo '
+    exr: 'Ejercicio '
+    proof: 'Demostración. '
+    remark: 'Nota: '
+    solution: 'Solución. '
+  ui:
+    chapter_name: 'Capítulo '
+delete_merged_file: yes
